@@ -10,8 +10,6 @@ function weatherFinder() {
 
     
 
-    console.log("whats up")
-
 
 
 
