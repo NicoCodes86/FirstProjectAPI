@@ -1,45 +1,37 @@
 import { keys } from './keys.js';
-console.log("script.js");
+
 
 import { cityFinder } from "./cityFinder.js";
-// cityFinder();
-//place city in call to intialize search
+
+
+const searchBar = document.getElementById("cities");
+let city = searchBar.value;
+
 const buttonTrigger = document.getElementById("buttonTrig");
 buttonTrigger.addEventListener("click",(e) => {
     console.log("click detected");
     if(e.target.className == "btn btn-outline-secondary") {
+        searchBar.innerHTML = ""; 
         cityFinder(); 
     }
 });
 
+weatherFinder(); 
 function weatherFinder() {
     
-
-    // const searchBar = document.getElementById("cities");
-    // let city = searchBar.value; 
-
-    // const buttonTrigger = document.getElementById("buttonTrig").addEventListener("click", cityFinder());
-    // console.log(buttonTrigger);
-
-
-
-
-
+    // console.log("this is the script.js file"); 
+  
+    // const quotes = fetch("https://famous-quotes4.p.rapidapi.com/random?category=all&count=2", {
+    //     "method": "GET",
+    //     "headers": {
+    //         "x-rapidapi-host": "famous-quotes4.p.rapidapi.com",
+    //         "x-rapidapi-key": "ba90d92fb1mshe4629f31c255d44p1e7646jsn25abca39e05c"
+    //     }
+    // })
+    // .then(response => {
+    //     console.log(response);
+    // })
+    // const data3 = quotes.json();
+    // console.log(data3); 
 
 }
-
-
-// let searchBar = document.getElementById("cities");
-// console.log(searchBar); 
-// console.log(searchBar); 
-
-// let city = searchBar.value;
-
-//pass city into city finder function()
-
-//1) store user info, after clicking button, start API call; 
-//2) create button to submit - event listener triggers function
-//3)how we create city(var) that will be used URL call wih API fetch
-
-
-// buttonTrig.addEventListener("click", (functionCall)); 
