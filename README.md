@@ -27,8 +27,7 @@ alert, if no alert, tells user to have a wonderful day!
 Not licensed 
 
 # Roadmap
-Continue to build, and more functionality as my skills improve with Javascript, DOM/HTML, and CSS. Im
-also actively networking to find likeminded invidviduals to build other projects that I can integrate into my own,
-and or collaboratively with others. 
+Continue to build, and add more functionality as my skills improve with Javascript, DOM/HTML, and CSS. Im
+also actively networking to find likeminded invidviduals to build other projects with real world applications.
 
 
