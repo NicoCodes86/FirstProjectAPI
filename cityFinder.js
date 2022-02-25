@@ -37,8 +37,10 @@ const data2 = await response2.json();
 console.log(data2); 
 
 
-    console.log(data2.stations); 
+    // console.log(data2.stations); 
 
+    // let convert = data2.stations.stringify(); 
+    // console.log(convert);
 
     let currWeatherBox =  `<div class="card-body" style="width: 15rem" style="height: 10rem";>
     <p>${data.location.name + ", " + data.location.region}</p>
@@ -119,13 +121,13 @@ console.log(data2);
 
         
 
-      let localSdisplay = `<div class="container" border="2px">
-      <div class="row" border="25px">
-        <div class="col">
-         <p>${data2.stations.json()}<p>
-        </div>`
+    //   let localSdisplay = `<div class="container" border="2px">
+    //   <div class="row" border="25px">
+    //     <div class="col">
+    //      <p>${data2.stations.stringify()}<p>
+    //     </div>`
 
-        localWstationsHTML.innerHTML += localSdisplay;
+    //     localWstationsHTML.innerHTML += localSdisplay;
 
 
     }

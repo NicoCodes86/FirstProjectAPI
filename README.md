@@ -1,10 +1,10 @@
 # FirstProjectAPI
 CountryCoding
 #Insta-weather
-This app takes user input in the form of city, country, or zip code to generate the current, and five day forecast for the week. Alerts also displayed from local weather stations in the city. 
+This app takes user input in the form of city, country, or zip code to generate the current, and five day forecast for the week. Alerts are also displayed from local weather stations in the city if any. 
 
 
-##
+# Usage
 Javascript 
 import { keys } from './keys.js';
 
@@ -23,15 +23,12 @@ low temp, high temp
 
 alert, if no alert, tells user to have a wonderful day!
 
-
-
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-
-
 ## License
 Not licensed 
+
+# Roadmap
+Continue to build, and more functionality as my skills improve with Javascript, DOM/HTML, and CSS. Im
+also actively networking to find likeminded invidviduals to build other projects that I can integrate into my own,
+and or collaboratively with others. 
 
 
