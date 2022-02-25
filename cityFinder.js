@@ -9,8 +9,11 @@ async function cityFinder() {
     let sideBarDisplay = document.getElementById("sideBar");
     sideBarDisplay.innerHTML = ""; 
     
-    let nearbyStations = document.getElementById("localweatherstations");
-    nearbyStations.innerHTML = ""; 
+    let alertHTML = document.getElementById("alertstation");
+    alertHTML.innerHTML = ""; 
+
+    let localWstationsHTML = document.getElementById("localWstations");
+    localWstationsHTML.innerHTML = "";
     
     //current fetch for city
     const response = await fetch(`https://weatherapi-com.p.rapidapi.com/forecast.json?q=${city}&days=3`, {
@@ -34,9 +37,10 @@ const data2 = await response2.json();
 console.log(data2); 
 
 
-    let allStations = data2.stations[0];
-    console.log(allStations); 
+    // console.log(data2.stations); 
 
+    // let convert = data2.stations.stringify(); 
+    // console.log(convert);
 
     let currWeatherBox =  `<div class="card-body" style="width: 15rem" style="height: 10rem";>
     <p>${data.location.name + ", " + data.location.region}</p>
@@ -97,26 +101,35 @@ console.log(data2);
 
       if(data2.alerts.length > 0) {
 
-        let stationDisplay = `<div class="container" border="2px">
+        let alertDisplay = `<div class="container" border="2px">
         <div class="row" border="25px">
           <div class="col">
-           <p>Check local station for emergency! My page isnt complete!<p>
-           <p>${allStations}<p>
-          </div>`
+           <p>${data2.alerts[0]}<p>
+          </div>`; 
 
-          nearbyStations.innerHTML += stationDisplay; 
+          alertHTML.innerHTML += alertDisplay; 
 
       } else {
-        let stationDisplay = `<div class="container" border="2px">
+        let alertDisplay = `<div class="container" border="2px">
         <div class="row" border="25px">
           <div class="col">
-           <p> No local alerts !<p>
-          </div>`
+           <p> No alerts! Have a wonderful Day!<p>
+          </div>`; 
 
-          nearbyStations.innerHTML += stationDisplay; 
+          alertHTML.innerHTML += alertDisplay; 
       }
 
         
+
+    //   let localSdisplay = `<div class="container" border="2px">
+    //   <div class="row" border="25px">
+    //     <div class="col">
+    //      <p>${data2.stations.stringify()}<p>
+    //     </div>`
+
+    //     localWstationsHTML.innerHTML += localSdisplay;
+
+
     }
     
     export { cityFinder }

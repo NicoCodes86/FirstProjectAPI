@@ -11,7 +11,7 @@ const buttonTrigger = document.getElementById("buttonTrig");
 buttonTrigger.addEventListener("click",(e) => {
     console.log("click detected");
     if(e.target.className == "btn btn-outline-secondary") {
-        searchBar.innerHTML = ""; 
+        searchBar.innerHTML = " "; 
         cityFinder(); 
     }
 });
